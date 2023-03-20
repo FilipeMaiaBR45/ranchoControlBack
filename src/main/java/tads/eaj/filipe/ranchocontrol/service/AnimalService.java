@@ -34,6 +34,7 @@ public class AnimalService {
     public Animal update(Animal a){
         return  repository.saveAndFlush(a);
     }
+
     public Animal delete(Long id){
         Animal a = repository.getById(id);
         a.setDeleted(new Date());
